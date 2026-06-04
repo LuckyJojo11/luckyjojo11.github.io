@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Eclipse Client",
+    "description": "A Custom Minecraft Client - Built for Speed, Modding and Fun",
+    "url": "Eclipse-Client",
+    "icon": "icons/eclipse.png",
+    "background": "icons/eclipse_bg.png"
+  }
+]
