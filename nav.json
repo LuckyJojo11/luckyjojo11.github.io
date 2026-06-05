@@ -1,10 +1,10 @@
 [
   {
-    "title": "Start",
-    "url": "/"
-  },
-  {
     "title": "Eclipse Client",
     "url": "/Eclipse-Client"
+  },
+  {
+    "title": "Editor",
+    "url": "/editor/"
   }
 ]

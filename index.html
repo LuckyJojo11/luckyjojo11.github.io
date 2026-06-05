@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LuckyJojo11's Stuff</title>
     <link rel="icon" type="image/png" href="icons/logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260605-14">
+    <link rel="stylesheet" href="auth.css?v=20260605-5">
   </head>
   <body>
     <header class="topbar">
@@ -14,6 +15,7 @@
         <span>LuckyJojo11's Stuff</span>
       </a>
       <nav class="mainnav" id="mainnav" aria-label="Hauptnavigation"></nav>
+      <div class="auth-area" data-auth-root></div>
     </header>
 
     <main class="page-shell">
@@ -23,17 +25,24 @@
         <p class="lead">Projects made by LuckyJojo11 and Friends</p>
       </section>
 
+      <section class="filter-panel" aria-label="Projektfilter">
+        <input class="project-search" id="project-search" type="search" placeholder="Search projects" autocomplete="off">
+        <div class="active-filters" id="active-filters" aria-label="Tag-Filter"></div>
+      </section>
       <section class="button-grid" id="button-grid" aria-live="polite"></section>
-      <p class="empty-state" id="empty-state" hidden>Keine Kacheln gefunden.</p>
+      <p class="empty-state" id="empty-state" hidden>It is quiet here.<br/>Too quiet.</p>
     </main>
 
     <footer class="footer" id="impressum">
       <div>
-        <strong>About</strong>
-        <p>I am a youg Coder who likes to not finish Projects ;)</p>
+        <strong>About Me</strong>
+        <p>I am a young Coder who likes to not finish Projects ;)</p>
       </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js?v=20260605-4"></script>
+    <script src="auth.js?v=20260605-6"></script>
+    <script src="app.js?v=20260605-16"></script>
   </body>
 </html>

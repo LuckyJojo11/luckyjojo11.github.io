@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Editor</title>
+    <link rel="icon" type="image/png" href="../icons/logo.png">
+    <link rel="stylesheet" href="../auth.css?v=20260605-5">
+    <link rel="stylesheet" href="editor.css?v=20260605-6">
+  </head>
+  <body>
+    <header class="editor-topbar">
+      <a class="brand" href="../">
+        <img src="../icons/logo.png" alt="" width="38" height="38">
+        <span>Project Editor</span>
+      </a>
+      <div class="auth-area" data-auth-root></div>
+      <a class="back-link" href="../index.html">Back to site</a>
+    </header>
+
+    <main class="editor-shell">
+      <section class="editor-panel">
+        <div class="editor-actions">
+          <button class="tab-button is-active" type="button" data-file="buttons.json">Projects</button>
+          <button class="tab-button" type="button" data-file="tags.json">Tags</button>
+          <button class="tab-button" type="button" data-file="nav.json">Top Buttons</button>
+        </div>
+
+        <div class="tool-row">
+          <button id="add-item" type="button">Add Project</button>
+          <button id="discard-draft" type="button">Reload Files</button>
+          <button id="load-database" type="button">Load from Database</button>
+          <button id="save-database" type="button">Save to Database</button>
+          <label class="file-import">
+            <span>Import JSON</span>
+            <input id="file-input" type="file" accept=".json,application/json">
+          </label>
+          <button id="download-json" type="button">Download JSON</button>
+        </div>
+
+        <section class="preview-panel" aria-label="Preview">
+          <div class="preview-head">
+            <h2>Preview</h2>
+            <span id="autosave-status">Saved automatically.</span>
+          </div>
+          <div class="preview-grid">
+            <div class="preview-device desktop-preview">
+              <div class="preview-title">Desktop</div>
+              <iframe id="desktop-preview" title="Desktop Preview"></iframe>
+            </div>
+            <div class="preview-device mobile-preview">
+              <div class="preview-title">Mobile</div>
+              <iframe id="mobile-preview" title="Mobile Preview"></iframe>
+            </div>
+          </div>
+        </section>
+
+        <div class="visual-editor" id="visual-editor"></div>
+
+        <details class="json-preview">
+          <summary>JSON Preview</summary>
+          <textarea id="json-editor" spellcheck="false"></textarea>
+        </details>
+
+        <p class="status" id="editor-status">Ready.</p>
+      </section>
+    </main>
+
+    <div class="modal-backdrop" id="confirm-modal" hidden>
+      <section class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+        <h2 id="confirm-title">Delete entry?</h2>
+        <p id="confirm-message">This will remove the selected entry from the editor draft.</p>
+        <div class="confirm-actions">
+          <button id="cancel-delete" type="button">Cancel</button>
+          <button id="confirm-delete" class="danger" type="button">Delete</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../supabase-config.js?v=20260605-4"></script>
+    <script src="../auth.js?v=20260605-6"></script>
+    <script src="editor.js?v=20260605-9"></script>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+.auth-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.auth-user {
+  max-width: 220px;
+  color: var(--muted, #a8b7c4);
+  font-size: 0.84rem;
+  font-weight: 750;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-menu {
+  position: relative;
+}
+
+.account-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 230px;
+  min-height: 38px;
+  padding: 8px 12px;
+  color: var(--text, #eef5f8);
+  font: inherit;
+  font-weight: 850;
+  border: 1px solid rgba(139, 194, 228, 0.28);
+  border-radius: var(--radius, 8px);
+  background: rgba(35, 61, 81, 0.72);
+  cursor: pointer;
+}
+
+.account-avatar {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 999px;
+  background: rgba(105, 167, 207, 0.22);
+}
+
+.account-avatar-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text, #eef5f8);
+  font-size: 0.78rem;
+}
+
+.account-trigger::after {
+  content: "v";
+  color: var(--muted, #a8b7c4);
+  font-size: 0.75rem;
+}
+
+.account-trigger span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 30;
+  display: grid;
+  gap: 6px;
+  min-width: 170px;
+  padding: 8px;
+  border: 1px solid rgba(139, 194, 228, 0.24);
+  border-radius: var(--radius, 8px);
+  background: rgba(23, 35, 49, 0.98);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.42);
+}
+
+.account-dropdown[hidden] {
+  display: none;
+}
+
+.account-dropdown button {
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 36px;
+  padding: 8px 10px;
+  color: var(--text, #eef5f8);
+  font: inherit;
+  font-weight: 750;
+  text-align: left;
+  border: 0;
+  border-radius: var(--radius, 8px);
+  background: transparent;
+  cursor: pointer;
+}
+
+.account-dropdown button:hover {
+  background: rgba(105, 167, 207, 0.16);
+}
+
+.auth-button,
+.auth-secondary {
+  min-height: 38px;
+  padding: 8px 12px;
+  color: var(--text, #eef5f8);
+  font: inherit;
+  font-weight: 800;
+  border: 1px solid rgba(139, 194, 228, 0.28);
+  border-radius: var(--radius, 8px);
+  background: rgba(35, 61, 81, 0.72);
+  cursor: pointer;
+}
+
+.auth-secondary {
+  color: var(--muted, #a8b7c4);
+  background: rgba(8, 15, 22, 0.42);
+}
+
+.auth-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(5, 10, 16, 0.68);
+  backdrop-filter: blur(12px);
+}
+
+.auth-modal-backdrop[hidden] {
+  display: none;
+}
+
+.auth-dialog,
+.auth-gate {
+  width: min(430px, 100%);
+  padding: 18px;
+  color: var(--text, #eef5f8);
+  border: 1px solid rgba(139, 194, 228, 0.24);
+  border-radius: var(--radius, 8px);
+  background: rgba(23, 35, 49, 0.98);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.52), 0 8px 22px rgba(0, 0, 0, 0.36);
+}
+
+.auth-dialog h2,
+.auth-gate h2 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.auth-dialog p,
+.auth-gate p,
+.auth-status {
+  margin: 10px 0 0;
+  color: var(--muted, #a8b7c4);
+  line-height: 1.5;
+}
+
+.auth-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted, #a8b7c4);
+  font-size: 0.84rem;
+  font-weight: 750;
+}
+
+.auth-form input {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  color: var(--text, #eef5f8);
+  font: inherit;
+  border: 1px solid rgba(139, 194, 228, 0.24);
+  border-radius: var(--radius, 8px);
+  background: rgba(8, 15, 22, 0.72);
+  outline: none;
+}
+
+.auth-form input[type="file"] {
+  padding: 8px;
+}
+
+.auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.auth-gate {
+  width: min(720px, calc(100% - 32px));
+  margin: 42px auto;
+}
+
+.auth-page {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  width: min(720px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 46px 0 70px;
+}
+
+.auth-page-card {
+  width: min(460px, 100%);
+}
+
+.auth-page-card h1 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+@media (max-width: 720px) {
+  .auth-area {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .account-menu,
+  .account-trigger {
+    width: 100%;
+  }
+
+  .account-dropdown {
+    left: 0;
+    right: auto;
+  }
+}

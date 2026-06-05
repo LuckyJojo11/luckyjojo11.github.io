@@ -1,0 +1,58 @@
+[
+  {
+    "id": "minecraft",
+    "description": "Minecraft",
+    "icon": "gamepad",
+    "background": "rgba(105, 167, 207, 0.24)",
+    "color": "blue"
+  },
+  {
+    "id": "modding",
+    "description": "Modding",
+    "icon": "code",
+    "background": "rgba(92, 214, 168, 0.22)",
+    "color": "green"
+  },
+  {
+    "id": "custom-client",
+    "description": "Custom Client",
+    "icon": "zap",
+    "background": "rgba(255, 205, 86, 0.22)",
+    "color": "yellow"
+  },
+  {
+    "id": "status-wip",
+    "description": "Work in Progress",
+    "icon": "wrench",
+    "background": "rgba(220, 68, 68, 0.48)",
+    "color": "white",
+    "filter": false
+  },
+  {
+    "id": "status-scheduled",
+    "description": "Release on {date}",
+    "countdownDescription": "Release in {countdown}",
+    "manualDescription": "Scheduled",
+    "icon": "calendar-clock",
+    "background": "rgba(255, 209, 102, 0.56)",
+    "color": "#1d1603",
+    "filter": false
+  },
+  {
+    "id": "status-released",
+    "description": "Version {version}",
+    "icon": "badge-check",
+    "background": "rgba(51, 168, 111, 0.48)",
+    "color": "white",
+    "filter": false
+  },
+  {
+    "id": "collab",
+    "description": "Collab",
+    "icon": "users",
+    "background": "rgba(183, 148, 244, 0.22)",
+    "color": "purple",
+    "filter": false,
+    "releaseVisibility": 0
+  }
+]
