@@ -46,7 +46,7 @@
     "background": "icons/mondnachtwolf_bg.png",
     "status": {
       "version": "1.0.0",
-      "releaseDate": "",
+      "releaseDate": "2026-08-05T18:00:00+02:00",
       "mode": 0
     },
     "tags": [],
@@ -60,15 +60,7 @@
         "background": "rgba(105, 167, 207, 0.24)",
         "color": "blue",
         "text": "Try it out",
-        "url": "Eclipse-Client",
-        "releaseVisibility": 1
-      },
-      {
-        "icon": "code",
-        "background": "rgba(92, 214, 168, 0.22)",
-        "color": "green",
-        "text": "Code",
-        "url": "https://github.com/luckyjojo11",
+        "url": "mondnachtwolf",
         "releaseVisibility": 1
       }
     ]
